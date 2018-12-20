@@ -8,11 +8,11 @@ class PigLatinizer
   def piglatinize(word)
     #binding.pry
     parts_of_word = word.split(/([^aeiouAEIOU]*)([aeiouAEIOU]*)(.*)/)
-    start = parts_of_word[1] # consonant cluster
+    consonant_cluster = parts_of_word[1] # consonant cluster
     rest = parts_of_word[2] + (parts_of_word[3] || "")
     binding.pry
-    if start.length>0
-      "#{rest}#{start}ay"
+    if consonant_cluster.length>0
+      "#{rest}#{consonant_cluster}ay"
     else
       "#{rest}way"
     end
