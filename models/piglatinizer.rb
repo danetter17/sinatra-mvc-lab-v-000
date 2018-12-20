@@ -7,7 +7,7 @@ class PigLatinizer
     words = phrase.chomp.split(' ')
     words.each do |word|
       parts_of_word = word.split(/([^aeiouAEIOU]*)([aeiouAEIOU]*)(.*)/)
-      consonant_cluster = parts_of_word[1] # consonant cluster
+      consonant_cluster = parts_of_word[1]
       rest = parts_of_word[2] + (parts_of_word[3] || "")
       #binding.pry
       if consonant_cluster.length>0
