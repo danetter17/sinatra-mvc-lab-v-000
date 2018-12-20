@@ -1,9 +1,9 @@
 class PigLatinizer
-  # attr_accessor :words
-  #
-  # def initialize(words)
-  #   @words = words
-  # end
+  attr_accessor :words
+  
+  def initialize(words)
+    @words = words
+  end
 
   def piglatinize(phrase)
     #binding.pry
@@ -24,9 +24,9 @@ class PigLatinizer
     pig_latin_words.join(" ")
   end
 
-  def to_pig_latin(sentence)
-    words = sentence.split(" ")
-    words.map {|word| piglatinize(word)}.join(" ")
-    #binding.pry
-  end
+  # def to_pig_latin(sentence)
+  #   words = sentence.split(" ")
+  #   words.map {|word| piglatinize(word)}.join(" ")
+  #   #binding.pry
+  # end
 end
