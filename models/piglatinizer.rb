@@ -10,7 +10,7 @@ class PigLatinizer
     parts_of_word = word.split(/([^aeiouAEIOU]*)([aeiouAEIOU]*)(.*)/)
     consonant_cluster = parts_of_word[1] # consonant cluster
     rest = parts_of_word[2] + (parts_of_word[3] || "")
-    #binding.pry
+    binding.pry
     if consonant_cluster.length>0
       "#{rest}#{consonant_cluster}ay"
     else
