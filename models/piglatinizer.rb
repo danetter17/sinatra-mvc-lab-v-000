@@ -7,7 +7,7 @@ class PigLatinizer
 
   def piglatinize(word)
     #binding.pry
-    parts_of_word = word.split(/([^aeiouAEIOU]*)([aeiouAEIOU]*)(.*)/).slice
+    parts_of_word = word.split(/([^aeiouAEIOU]*)([aeiouAEIOU]*)(.*)/)
     start = parts_of_word[1] # consonant cluster
     rest = parts_of_word[2] + (parts_of_word[3] || "")
     binding.pry
